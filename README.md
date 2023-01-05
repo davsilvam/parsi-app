@@ -44,8 +44,7 @@ A Parsi é uma aplicação web que o ajuda a registrar suas transações e ter u
 
 ### :hammer: **Construção do site**
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org)
 - [Vue.js](https://vuejs.org)
 - [Pinia](https://pinia.vuejs.org)
 - [VueUse](https://vueuse.org)
@@ -61,7 +60,6 @@ A Parsi é uma aplicação web que o ajuda a registrar suas transações e ter u
 
 ### :art: **Estilização**
 
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Heroicons](https://heroicons.com)
 - [Google Fonts](https://fonts.google.com)
