@@ -25,7 +25,7 @@ A Parsi é uma aplicação web que o ajuda a registrar suas transações e ter u
 ### _Mobile e Telas Menores_
 
 <h1 align="center">
-    <img src="./.github/mobile_screenshot.png" style="width: 40%">
+    <img src="./.github/mobile_screenshot.png" style="width: 60%">
 </h1>
 
 ## :pushpin: **Páginas da Aplicação (Rotas)**
