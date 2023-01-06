@@ -106,12 +106,10 @@ export const useTransactions = defineStore('transactions', () => {
 
   function getTransactionValueString(value: number) {
     const valueString = ref(
-      value < 10 && value > -10
-        ? '0' + Math.abs(value).toFixed(2)
-        : Math.abs(value).toFixed(2)
+      value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     )
 
-    return value < 0 ? `- R$ ${valueString.value}` : `R$ ${valueString.value}`
+    return valueString.value
   }
 
   function getCurrentBalance(transactionsArray: TransactionType[]) {
@@ -144,11 +142,9 @@ export const useTransactions = defineStore('transactions', () => {
   }
 
   function getIncomeBalanceString(transactionsArray: TransactionType[]) {
-    const incomeBalanceString = ref(
-      getTransactionValueString(getIncomeBalance(transactionsArray))
-    )
+    const incomeBalance = ref(getIncomeBalance(transactionsArray))
 
-    return incomeBalanceString
+    return getTransactionValueString(incomeBalance.value)
   }
 
   function getExpenseBalance(transactionsArray: TransactionType[]) {
@@ -164,11 +160,6 @@ export const useTransactions = defineStore('transactions', () => {
 
   function getExpenseBalanceString(transactionsArray: TransactionType[]) {
     const expenseBalance = ref(getExpenseBalance(transactionsArray))
-
-    if (expenseBalance.value === 0) {
-      const defaultExpenseBalanceString = ref('R$ 00.00')
-      return defaultExpenseBalanceString.value
-    }
 
     return getTransactionValueString(expenseBalance.value * -1)
   }

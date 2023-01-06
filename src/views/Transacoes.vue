@@ -65,7 +65,6 @@
               >
                 {{
                   transactionsStore.getIncomeBalanceString(monthTransactions)
-                    .value
                 }}
                 <ArrowTrendingUpIcon class="w-5 text-green-600 lg:w-6" />
               </h2>

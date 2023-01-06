@@ -60,7 +60,6 @@
           ]"
         >
           {{
-            (transaction.value > 0 ? '+ ' : '') +
             transactionsStore.getTransactionValueString(transaction.value)
           }}
         </h2>
