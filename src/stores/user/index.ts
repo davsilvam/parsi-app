@@ -178,12 +178,10 @@ export const useUser = defineStore('user', () => {
         const getCurrentValue = () => {
           const currentValue = ref<TransactionType[]>(transactionsArray.value)
 
-          currentValue.value
+          return currentValue.value
             .filter((transaction) => transaction.category === category)
             .map((transaction) => transaction.value)
             .reduce((acc, value) => acc + value, 0) * -1
-
-          return currentValue.value
         }
 
         initialDate = now.toLocaleDateString('pt-BR', { month: 'short' })
